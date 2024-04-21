@@ -5,18 +5,18 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false
     else who = m.chat
     let user = global.db.data.users[who]
-    if (!who) throw `✳️ ♨ Tᴀɢ ᴏʀ ᴍᴇɴᴛɪᴏɴ ᴛʜᴇ ᴜsᴇʀ ᴛᴏ ᴜɴʙᴀɴ ♨`
+    if (!who) throw `🦇قم بمنشنه شخص ما لالغاء حظره🦇`
     let users = global.db.data.users
     users[who].banned = false
     conn.reply(m.chat, `
-✅Hᴀs ʙᴇᴇɴ ᴜɴʙᴀɴɴᴇᴅ 
+🦇تم الغاء الحظر🦇
 
 ───────────
-@${who.split`@`[0]} Nᴏᴡ ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs `, m, { mentions: [who] })
+@${who.split`@`[0]}🦇الان يمكنك استخدام الاوامر🦇 `, m, { mentions: [who] })
 }
-handler.help = ['unban @user']
+handler.help = ['الغاء-الحظر @user']
 handler.tags = ['owner']
-handler.command = /^unban$/i
+handler.command = /^الغاء-الحظر$/i
 handler.rowner = true
 
 export default handler
