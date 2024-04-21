@@ -334,20 +334,17 @@ break;
         
         
 
-        case 'botmenu':
-          lkr = `┌────•✧𝘽𝙊𝙏_𝙈𝙀𝙉𝙐✧•────┐
-┊ ꒰ ͜͡➸ ${usedPrefix}𝙋𝙞𝙣𝙜 ✧
-┊ ꒰ ͜͡➸ ${usedPrefix}𝙐𝙥𝙩𝙞𝙢𝙚 ✧
-┊ ꒰ ͜͡➸ ${usedPrefix}𝘽𝙤𝙩/𝙋𝙧𝙞𝙣𝙘𝙚 ✧
-┊ ꒰ ͜͡➸ ${usedPrefix}𝙊𝙬𝙣𝙚𝙧 ✧
-┊ ꒰ ͜͡➸ ${usedPrefix}𝙄𝙣𝙛𝙤𝙗𝙤𝙩 ✧
-┊ ꒰ ͜͡➸ ${usedPrefix}𝙂𝙧𝙤𝙪𝙥𝙨 ✧
-┊ ꒰ ͜͡➸ ${usedPrefix}𝘽𝙡𝙤𝙘𝙠𝙡𝙞𝙨𝙩 ✧
-┊ ꒰ ͜͡➸ ${usedPrefix}𝙇𝙞𝙨𝙩𝙥𝙧𝙚𝙢 ✧
-┊ ꒰ ͜͡➸ ${usedPrefix}𝙂𝙜𝙥 ✧
-┊ ꒰ ͜͡➸ ${usedPrefix}𝙂𝙥𝙥𝙧𝙞𝙣𝙘𝙚 ✧
-┊ ꒰ ͜͡➸ ${usedPrefix}𝙈𝙚𝙣𝙪/𝙃𝙚𝙡𝙥/𝙃 ✧
-└───── •✧✧✧✧✧✧• ─────┘`; // Your bot menu message here
+        case 'البوت':
+          lkr = `•━━━━•🦇•━━━━•
+┊ 🦇 ${usedPrefix}بينغ ✧
+┊ 🦇 ${usedPrefix}وقت-التشغيل ✧
+┊ 🦇 ${usedPrefix}بوت ✧
+┊ 🦇 ${usedPrefix}المطور ✧
+┊ 🦇 ${usedPrefix}معلومات-البوت ✧
+┊ 🦇 ${usedPrefix}المجموعات ✧
+┊ 🦇 ${usedPrefix}المبلكين ✧
+┊ 🦇 ${usedPrefix}المميزين ✧
+└•━━━━•🦇•━━━━•`; // Your bot menu message here
           break;
         case 'اوامر-المطور':
           lkr = `•━━━━•اوامر المطور•━━━━•
@@ -355,18 +352,10 @@ break;
 ┊ 🦇 ${usedPrefix}تفعيل-المجموعة ✧
 ┊ 🦇 ${usedPrefix}حظر ✧
 ┊ 🦇 ${usedPrefix}الغاء-الحظر ✧
-┊ 🦇 ${usedPrefix}𝙋𝙧𝙚𝙢𝙡𝙞𝙨𝙩 ✧
-┊ 🦇 ${usedPrefix}𝘽𝙖𝙣𝙡𝙞𝙨𝙩 ✧
-┊ 🦇 ${usedPrefix}𝘼𝙙𝙙𝙥𝙧𝙚𝙢 ✧
-┊ 🦇 ${usedPrefix}𝘽𝙧𝙤𝙖𝙙𝙘𝙖𝙨𝙩 ✧
-┊ 🦇 ${usedPrefix}𝘽𝙧𝙤𝙖𝙙𝙘𝙖𝙨𝙜𝙘 ✧
-┊ 🦇 ${usedPrefix}𝙅𝙤𝙞𝙣 ✧
-┊ 🦇 ${usedPrefix}𝙩𝙭 ✧
-┊ 🦇 ${usedPrefix}𝙎𝙚𝙩𝙥𝙥𝙗𝙤𝙩 ✧
-┊ 🦇 ${usedPrefix}𝙎𝙚𝙩𝙥𝙧𝙚𝙛𝙞𝙭 ✧
-┊ 🦇 ${usedPrefix}𝙍𝙚𝙨𝙚𝙩𝙥𝙧𝙚𝙛𝙞𝙭 ✧
-┊ 🦇 ${usedPrefix}𝙂𝙚𝙩𝙛𝙞𝙡𝙚 ✧
-┊ 🦇 ${usedPrefix}𝙂𝙚𝙩𝙥𝙡𝙪𝙜𝙞𝙣 ✧
+┊ 🦇 ${usedPrefix}المحظورين ✧
+┊ 🦇 ${usedPrefix}اضف-مميز ✧
+┊ 🦇 ${usedPrefix}احذف-مميز ✧
+┊ 🦇 ${usedPrefix}المميزين ✧
 └•━━━━•🦇•━━━━•`; // 
           break;
           case 'groupmenu':
@@ -513,6 +502,6 @@ break;
     
     handler.help = ['list', 'botmenu', 'ownermenu', 'groupmenu', 'dlmenu', 'downloadermenu', 'economymenu', 'funmenu', 'gamemenu', 'stickermenu', 'nsfwmenu', 'logomenu', 'toolmenu'];
     handler.tags = ['main'];
-    handler.command = ['list', 'botmenu', 'اوامر-المطور', 'groupmenu', 'dlmenu', 'downloadermenu', 'economymenu', 'funmenu', 'gamemenu', 'stickermenu', 'nsfwmenu', 'logomenu', 'toolmenu'];
+    handler.command = ['list', 'البوت', 'اوامر-المطور', 'groupmenu', 'dlmenu', 'downloadermenu', 'economymenu', 'funmenu', 'gamemenu', 'stickermenu', 'nsfwmenu', 'logomenu', 'toolmenu'];
     
     export default handler
