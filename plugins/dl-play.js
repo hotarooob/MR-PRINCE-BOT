@@ -15,15 +15,15 @@ const handler = async (m, {
     args,
     usedPrefix
 }) => {
-    if (!text) throw `*_give a text to search_* \n*_Example: ${usedPrefix + command} A Subz gumbad waly naat Ahmed Raza Qadri_*`;
+    if (!text) throw `*_اكتب نص للبحث عنه_* \n*_مثال: ${usedPrefix + command} اغنية احمد محسن_*`;
     conn.GURUPLAY = conn.GURUPLAY ? conn.GURUPLAY : {};
     await conn.reply(m.chat, wait, m);
     const result = await searchAndDownloadMusic(text);
-    const infoText = `🎧🎼『 *ᴘʀɪɴᴄᴇ ᴘʟᴀʏᴇʀ* 』🎼🎧
+    const infoText = `🎧『 *الوكارد* 』🎧
 
     
    
-*🎶ᖇEᑭᒪY ᗯITᕼ ᑎᑌᗰᗷEᖇ TO GET YOᑌᖇ ᗩᑌᗪIO🎵*`;
+*🎶قم بالرد على هذه الرساله برقم النتيجه المطلوبه🎵*\n\n•━━━━•🦇•━━━━•`;
 
 const orderedLinks = result.allLinks.map((link, index) => {
     const sectionNumber = index + 1;
@@ -108,7 +108,7 @@ handler.before = async (m, {
 
 handler.help = ["play"];
 handler.tags = ["downloader"];
-handler.command = /^(play)$/i;
+handler.command = /^(شغل)$/i;
 handler.limit = false;
 export default handler;
 
@@ -124,7 +124,7 @@ function formatBytes(bytes, decimals = 2) {
 async function searchAndDownloadMusic(query) {
     try {
         const { videos } = await yts(query);
-        if (!videos.length) return "Sorry, no video results were found for this search.";
+        if (!videos.length) return "اسف لم اعثلر على بحثك";
 
         const allLinks = videos.map(video => ({
             title: video.title,
