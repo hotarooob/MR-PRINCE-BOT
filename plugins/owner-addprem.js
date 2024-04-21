@@ -5,23 +5,20 @@ let who
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false
     else who = m.chat
     let user = global.db.data.users[who]
-    if (!who) throw `✳️ Etiqueta o menciona a alguien\n\n📌 Ejemplo : ${usedPrefix + command} @user`
-if (global.prems.includes(who.split`@`[0])) throw '✳️ El usuario Mensionado Ya es premium'
+    if (!who) throw `•━━━━•🦇•━━━━•\n\nقم بمنشنه شخص ما لجعله مميز \n📌 مثال : ${usedPrefix + command} @مستخدم \n\n•━━━━•🦇•━━━━•`
+if (global.prems.includes(who.split`@`[0])) throw '*🦇المستخدم هذا مميز بالفعل!🦇*'
 global.prems.push(`${who.split`@`[0]}`)
 
 conn.reply(m.chat, `
-✅ PREMIUM
+*✅ اصبح مميزا*
 
-@${who.split`@`[0]} ahora te conviertes en un usuario premium
-┌───────────
-▢ *Nombre:* ${user.name}
-└───────────
+*@${who.split`@`[0]} مبرووووووكككك اصبحت مستخدم مميز*
 `, m, { mentions: [who] })
 
 }
-handler.help = ['addprem <@tag>']
+handler.help = ['اضف-مميز <@tag>']
 handler.tags = ['owner']
-handler.command = ['addprem', 'addpremium'] 
+handler.command = ['اضف-مميز'] 
 
 handler.group = true
 handler.rowner = true
